@@ -1,0 +1,63 @@
+/* The clickable area stays still while the chick changes poses. */
+.chick-logo {
+ --chick-logo-size: 120px;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--chick-logo-size, 64px);
+  height: var(--chick-logo-size, 64px);
+  text-decoration: none;
+  
+}
+
+
+.chick-logo__sprite {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('/chick-hatching.png');
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+  background-position: 0% 50%;
+}
+
+
+.chick-logo:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .chick-logo:hover .chick-logo__sprite,
+  .chick-logo:focus-visible .chick-logo__sprite {
+    animation: chick-hatch 900ms steps(1, end) forwards;
+  }
+}
+
+
+@keyframes chick-hatch {
+  
+  0% {
+    background-position: 0% 50%;
+  }
+
+  
+  35% {
+    background-position: 50% 50%;
+  }
+
+  
+  70%, 100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .chick-logo__sprite {
+    background-position: 100% 50%;
+  }
+}
+

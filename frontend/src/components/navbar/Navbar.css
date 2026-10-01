@@ -29,7 +29,7 @@
   text-decoration: underline;
 }
 
-/* Keep the clickable area still while the bird moves. */
+
 .navbar-logo {
   display: inline-flex;
   align-items: center;
@@ -38,20 +38,20 @@
   height: 52px;
 }
 
-/* Set the bird's size and allow it to be transformed. */
+
 .bird-logo {
   display: inline-block;
   font-size: 40px;
   line-height: 1;
 }
 
-/* Start the animation on hover or keyboard focus. */
+
 .navbar-logo:hover .bird-logo,
 .navbar-logo:focus-visible .bird-logo {
   animation: bird-hop 0.6s ease-in-out infinite;
 }
 
-/* Define the bird's movement throughout one animation cycle. */
+
 @keyframes bird-hop {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
@@ -66,7 +66,7 @@
   }
 }
 
-/* Respect visitors who have requested reduced motion. */
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-logo:hover .bird-logo,
   .navbar-logo:focus-visible .bird-logo {

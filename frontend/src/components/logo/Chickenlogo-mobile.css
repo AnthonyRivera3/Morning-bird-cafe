@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .chick-logo {
+    --chick-logo-size: 120px;
+  }
+}
