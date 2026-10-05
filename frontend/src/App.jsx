@@ -1,15 +1,20 @@
 import './App.css'
 import Navbar from './components/navbar/Navbar.jsx';
+import Footer from "./components/footer/Footer.jsx";
 
 function App() {
   return (
-      <main>
-        <Navbar /> 
+    <>
+      <Navbar />
+
+      <main style={{ minHeight: "1500px" }}>
         <h1>My Website</h1>
-        <p>This is my first React component.</p>
       </main>
-      );
+
+      <Footer />
+    </>
+  );
 }
 
 
-      export default App
+export default App

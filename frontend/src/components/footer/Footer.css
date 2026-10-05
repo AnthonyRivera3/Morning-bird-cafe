@@ -1,0 +1,214 @@
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+
+  overflow: hidden;
+
+  font-family: "Fredoka", sans-serif;
+}
+
+
+/* =========================
+   TOP DIRT LAYER
+   ========================= */
+
+.soil-layer {
+  position: relative;
+
+  min-height: 150px;
+
+  padding: 30px 20px;
+
+  background-color: #7a4b2a;
+
+  background-image:
+    radial-gradient(
+      circle at 15% 25%,
+      #5e351e 0 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 35% 70%,
+      #945d35 0 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 60% 30%,
+      #5e351e 0 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 80% 75%,
+      #9b6339 0 4px,
+      transparent 5px
+    );
+
+  background-size:
+    80px 70px,
+    110px 90px,
+    95px 85px,
+    120px 100px;
+}
+
+
+/* =========================
+   FOOTER TEXT
+   ========================= */
+
+.footer-content {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  color: #fff4dc;
+}
+
+
+.footer-content h2 {
+  margin: 0 0 8px;
+
+  font-size: 26px;
+}
+
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+
+.footer-copyright {
+  margin-top: 18px !important;
+
+  font-size: 14px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================
+   DIRT + ROCK LAYER
+   ========================= */
+
+.mixed-layer {
+  height: 90px;
+
+  background-color: #654128;
+
+  background-image:
+
+    /* Rock 1 */
+    radial-gradient(
+      ellipse at 10% 35%,
+      #777 0 12px,
+      #555 13px 17px,
+      transparent 18px
+    ),
+
+    /* Rock 2 */
+    radial-gradient(
+      ellipse at 28% 70%,
+      #9b8b79 0 9px,
+      #66594d 10px 14px,
+      transparent 15px
+    ),
+
+    /* Rock 3 */
+    radial-gradient(
+      ellipse at 48% 30%,
+      #777064 0 13px,
+      #554e45 14px 18px,
+      transparent 19px
+    ),
+
+    /* Rock 4 */
+    radial-gradient(
+      ellipse at 68% 68%,
+      #998978 0 10px,
+      #62574b 11px 15px,
+      transparent 16px
+    ),
+
+    /* Rock 5 */
+    radial-gradient(
+      ellipse at 88% 35%,
+      #74716c 0 12px,
+      #504e49 13px 17px,
+      transparent 18px
+    ),
+
+    /* Dirt speckles */
+    radial-gradient(
+      circle,
+      #4c2f1c 0 2px,
+      transparent 3px
+    );
+
+  background-size:
+    230px 90px,
+    260px 90px,
+    290px 90px,
+    250px 90px,
+    300px 90px,
+    35px 35px;
+}
+
+
+/* =========================
+   BOTTOM ROCK LAYER
+   ========================= */
+
+.rock-layer {
+  height: 110px;
+
+  background-color: #4d4b48;
+
+  background-image:
+
+    radial-gradient(
+      ellipse at 8% 60%,
+      #77746f 0 22px,
+      #56534f 23px 30px,
+      transparent 31px
+    ),
+
+    radial-gradient(
+      ellipse at 25% 35%,
+      #969087 0 28px,
+      #625e58 29px 36px,
+      transparent 37px
+    ),
+
+    radial-gradient(
+      ellipse at 45% 70%,
+      #706d68 0 24px,
+      #504d49 25px 32px,
+      transparent 33px
+    ),
+
+    radial-gradient(
+      ellipse at 67% 40%,
+      #8a857d 0 27px,
+      #5d5953 28px 35px,
+      transparent 36px
+    ),
+
+    radial-gradient(
+      ellipse at 88% 65%,
+      #77736d 0 25px,
+      #514e49 26px 34px,
+      transparent 35px
+    );
+
+  background-size:
+    250px 110px,
+    300px 110px,
+    280px 110px,
+    320px 110px,
+    270px 110px;
+}
