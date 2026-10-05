@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
 
+
+/* =========================
+   NAVBAR
+   ========================= */
+
 .navbar {
   position: relative;
 
@@ -7,78 +12,80 @@
   align-items: center;
   flex-wrap: wrap;
 
+  width: 100%;
+
   padding: 16px 24px 25px;
 
   background-color: #2aa0f4;
+
+  overflow: hidden;
 }
 
-.chick-logo,
-.navbar-links {
+
+/* =========================
+   CHICK POSITION
+   ========================= */
+
+.chick-logo {
   transform: translateY(35px);
+  z-index: 3;
 }
 
-.navbar a {
-  color: rgb(255, 167, 25);
-  text-decoration: none;
-}
 
-.navbar-logo {
-  font-size: 24px;
-  font-weight: bold;
-}
+/* =========================
+   NAV LINKS
+   ========================= */
 
 .navbar-links {
   position: absolute;
- 
-  left: 33%;
+
+  left: 40%;
+
   transform: translate(-50%, 35px);
 
   display: flex;
   align-items: center;
-  font-size: 22px;
+
   gap: 180px;
+
   font-family: "Fredoka", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+
+  z-index: 3;
 }
+
+
+.navbar a {
+  color: rgb(255, 167, 25);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+.navbar-links a {
+  transition:
+    transform 0.2s ease,
+    text-decoration 0.2s ease;
+}
+
 
 .navbar-links a:hover,
 .navbar-links a:focus-visible {
   text-decoration: underline;
+  transform: translateY(-2px);
 }
 
 
-.navbar-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-}
+/* =========================
+   GRASS - BACK LAYER
+   ========================= */
 
-
-.bird-logo {
-  display: inline-block;
-  font-size: 40px;
-  line-height: 1;
-}
-
-
-.navbar-logo:hover .bird-logo,
-.navbar-logo:focus-visible .bird-logo {
-  animation: bird-hop 0.6s ease-in-out infinite;
-}
-
-/* Keep navbar content above the grass */
-.navbar > * {
-  position: relative;
-  z-index: 1;
-}
-
-
-/* Back layer of grass */
 .navbar::before {
   content: "";
 
   position: absolute;
+
   left: 0;
   right: 0;
   bottom: 0;
@@ -107,17 +114,24 @@
 
   transform-origin: bottom center;
 
-  animation: grass-wind 1.8s ease-in-out infinite alternate;
+  animation:
+    grass-wind 1.8s ease-in-out infinite alternate;
 
   pointer-events: none;
+
+  z-index: 2;
 }
 
 
-/* grass top */
+/* =========================
+   GRASS - FRONT LAYER
+   ========================= */
+
 .navbar::after {
   content: "";
 
   position: absolute;
+
   left: 0;
   right: 0;
   bottom: 0;
@@ -143,53 +157,84 @@
 
   transform-origin: bottom center;
 
-  animation: grass-wind-small 1.3s ease-in-out infinite alternate;
+  animation:
+    grass-wind-small 1.3s ease-in-out infinite alternate;
 
   pointer-events: none;
+
+  z-index: 2;
 }
 
+
+/* =========================
+   GRASS ANIMATIONS
+   ========================= */
+
 @keyframes grass-wind {
+
   0% {
-    background-position: 0px 0px, 0px 0px;
+    background-position:
+      0px 0px,
+      0px 0px;
+
     transform: skewX(-4deg);
   }
 
   50% {
-    background-position: 8px 0px, -6px 0px;
+    background-position:
+      8px 0px,
+      -6px 0px;
+
     transform: skewX(3deg);
   }
 
   100% {
-    background-position: 14px 0px, -10px 0px;
+    background-position:
+      14px 0px,
+      -10px 0px;
+
     transform: skewX(-3deg);
   }
+
 }
 
 
 @keyframes grass-wind-small {
+
   0% {
-    background-position: 0px 0px, 0px 0px;
+    background-position:
+      0px 0px,
+      0px 0px;
+
     transform: skewX(3deg);
   }
 
   50% {
-    background-position: -7px 0px, 5px 0px;
+    background-position:
+      -7px 0px,
+      5px 0px;
+
     transform: skewX(-3deg);
   }
 
   100% {
-    background-position: -12px 0px, 9px 0px;
+    background-position:
+      -12px 0px,
+      9px 0px;
+
     transform: skewX(2deg);
   }
+
 }
-/*grass bottom*/
 
 
-/*sun top*/
+/* =========================
+   SUN
+   ========================= */
+
 .sun {
   position: absolute;
 
-  /* Push part of the sun outside the corner */
   top: -30px;
   right: -30px;
 
@@ -205,10 +250,15 @@
     0 0 35px rgba(255, 216, 77, 0.8),
     0 0 60px rgba(255, 216, 77, 0.5);
 
-  z-index: 0;
+  animation:
+    sun-glow 2s ease-in-out infinite alternate;
 
-  animation: sun-glow 2s ease-in-out infinite alternate;
+  z-index: 1;
+  pointer-events: none;
 }
+
+
+/* Sun rays */
 
 .sun::before {
   content: "";
@@ -221,32 +271,44 @@
   top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
 
-  background: repeating-conic-gradient(
-    from 0deg,
-    rgba(255, 220, 80, 0.8) 0deg 5deg,
-    transparent 5deg 18deg
-  );
+  background:
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(255, 220, 80, 0.8) 0deg 5deg,
+      transparent 5deg 18deg
+    );
 
   border-radius: 50%;
 
-  z-index: -1;
+  animation:
+    sun-rays 8s linear infinite;
 
-  animation: sun-rays 8s linear infinite;
+  z-index: -1;
 }
 
+
 @keyframes sun-rays {
+
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
   }
 
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
   }
+
 }
 
+
 @keyframes sun-glow {
+
   from {
     box-shadow:
       0 0 15px rgba(255, 216, 77, 0.8),
@@ -260,30 +322,33 @@
       0 0 50px rgba(255, 216, 77, 0.8),
       0 0 80px rgba(255, 216, 77, 0.5);
   }
+
 }
 
-/*sun bottom*/
 
+/* =========================
+   CLOUDS
+   ========================= */
 
-
-
-/* top clouds */
 .cloud {
   position: absolute;
 
   width: 100px;
   height: 30px;
 
-  background: rgba(255, 255, 255, 0.9);
+  background:
+    rgba(255, 255, 255, 0.9);
 
   border-radius: 50px;
 
-  z-index: 0;
   pointer-events: none;
+
+  z-index: 1;
 }
 
 
 /* Left cloud bump */
+
 .cloud::before {
   content: "";
 
@@ -292,16 +357,17 @@
   width: 45px;
   height: 45px;
 
+  left: 15px;
+  top: -20px;
+
   background: inherit;
 
   border-radius: 50%;
-
-  left: 15px;
-  top: -20px;
 }
 
 
 /* Right cloud bump */
+
 .cloud::after {
   content: "";
 
@@ -310,69 +376,98 @@
   width: 55px;
   height: 55px;
 
+  right: 12px;
+  top: -28px;
+
   background: inherit;
 
   border-radius: 50%;
-
-  right: 12px;
-  top: -28px;
 }
+
+
+/* =========================
+   CLOUD 1
+   ========================= */
 
 .cloud-one {
   top: 30px;
   left: -150px;
 
-  animation: cloud-drift 60s linear infinite;
+  animation:
+    cloud-drift 60s linear infinite;
+
   animation-delay: 0s;
 }
+
+
+/* =========================
+   CLOUD 2
+   ========================= */
 
 .cloud-two {
   top: 70px;
   left: -150px;
 
-  transform: scale(0.7);
+  scale: 0.7;
+
   opacity: 0.65;
 
-  animation: cloud-drift 60s linear infinite;
+  animation:
+    cloud-drift 60s linear infinite;
+
   animation-delay: -20s;
 }
+
+
+/* =========================
+   CLOUD 3
+   ========================= */
 
 .cloud-three {
   top: 15px;
   left: -150px;
 
-  transform: scale(0.85);
+  scale: 0.85;
+
   opacity: 0.8;
 
-  animation: cloud-drift 60s linear infinite;
+  animation:
+    cloud-drift 60s linear infinite;
+
   animation-delay: -40s;
 }
 
+
+/* =========================
+   CLOUD ANIMATION
+   ========================= */
+
 @keyframes cloud-drift {
+
   from {
     translate: 0 0;
   }
 
   to {
-    translate: calc(100vw + 150px) 0;
+    translate:
+      calc(100vw + 150px) 0;
   }
+
 }
 
 
-@keyframes cloud-drift-small {
-  from {
-    translate: 0 0;
-  }
-
-  to {
-    translate: calc(100vw + 300px) 0;
-  }
-}
-/*clouds bottom*/
+/* =========================
+   REDUCED MOTION
+   ========================= */
 
 @media (prefers-reduced-motion: reduce) {
-  .navbar-logo:hover .bird-logo,
-  .navbar-logo:focus-visible .bird-logo {
+
+  .cloud,
+  .sun,
+  .sun::before,
+  .navbar::before,
+  .navbar::after {
     animation: none;
   }
+
 }

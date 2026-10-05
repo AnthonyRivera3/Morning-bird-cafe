@@ -1,5 +1,5 @@
-import "./chickenlogo.css";
-import "./chickenlogo-mobile.css";
+import "./Chickenlogo.css";
+import "./Chickenlogo-mobile.css";
 
 function ChickLogo() {
   return (

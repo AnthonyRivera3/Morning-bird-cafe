@@ -1,5 +1,23 @@
+/* =========================
+   CHICK LOGO - MOBILE
+   ========================= */
+
 @media (max-width: 768px) {
+
   .chick-logo {
-    --chick-logo-size: 120px;
+    --chick-logo-size: 100px;
+    top: 37%;
   }
+
+
+  /*
+    Keep the chicken permanently
+    on Phase 2 on mobile.
+  */
+  .chick-logo__sprite {
+    background-position: 0% 50% !important;
+    animation: none !important;
+    
+  }
+
 }
