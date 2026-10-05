@@ -1,16 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
 .navbar {
+  position: relative;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
 
-  padding: 16px 24px;
-  background-color: #1e293b;
+  padding: 16px 24px 25px;
+
+  background-color: #2aa0f4;
+}
+
+.chick-logo,
+.navbar-links {
+  transform: translateY(35px);
 }
 
 .navbar a {
-  color: white;
+  color: rgb(255, 167, 25);
   text-decoration: none;
 }
 
@@ -20,8 +28,16 @@
 }
 
 .navbar-links {
+  position: absolute;
+ 
+  left: 33%;
+  transform: translate(-50%, 35px);
+
   display: flex;
-  gap: 20px;
+  align-items: center;
+  font-size: 22px;
+  gap: 180px;
+  font-family: "Fredoka", sans-serif;
 }
 
 .navbar-links a:hover,
@@ -51,21 +67,308 @@
   animation: bird-hop 0.6s ease-in-out infinite;
 }
 
+/* Keep navbar content above the grass */
+.navbar > * {
+  position: relative;
+  z-index: 1;
+}
 
-@keyframes bird-hop {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
+
+/* Back layer of grass */
+.navbar::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 38px;
+
+  background:
+    repeating-linear-gradient(
+      75deg,
+      transparent 0px,
+      transparent 7px,
+      #4f8f43 7px,
+      #4f8f43 9px,
+      transparent 9px,
+      transparent 14px
+    ),
+    repeating-linear-gradient(
+      105deg,
+      transparent 0px,
+      transparent 8px,
+      #6aaa50 8px,
+      #6aaa50 10px,
+      transparent 10px,
+      transparent 16px
+    );
+
+  transform-origin: bottom center;
+
+  animation: grass-wind 1.8s ease-in-out infinite alternate;
+
+  pointer-events: none;
+}
+
+
+/* grass top */
+.navbar::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 30px;
+
+  background:
+    linear-gradient(
+      to top,
+      #39753a 0px,
+      #39753a 4px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      82deg,
+      transparent 0px,
+      transparent 6px,
+      #72ad55 6px,
+      #72ad55 8px,
+      transparent 8px,
+      transparent 13px
+    );
+
+  transform-origin: bottom center;
+
+  animation: grass-wind-small 1.3s ease-in-out infinite alternate;
+
+  pointer-events: none;
+}
+
+@keyframes grass-wind {
+  0% {
+    background-position: 0px 0px, 0px 0px;
+    transform: skewX(-4deg);
   }
 
-  30% {
-    transform: translateY(-8px) rotate(-12deg);
+  50% {
+    background-position: 8px 0px, -6px 0px;
+    transform: skewX(3deg);
   }
 
-  60% {
-    transform: translateY(-8px) rotate(12deg);
+  100% {
+    background-position: 14px 0px, -10px 0px;
+    transform: skewX(-3deg);
   }
 }
 
+
+@keyframes grass-wind-small {
+  0% {
+    background-position: 0px 0px, 0px 0px;
+    transform: skewX(3deg);
+  }
+
+  50% {
+    background-position: -7px 0px, 5px 0px;
+    transform: skewX(-3deg);
+  }
+
+  100% {
+    background-position: -12px 0px, 9px 0px;
+    transform: skewX(2deg);
+  }
+}
+/*grass bottom*/
+
+
+/*sun top*/
+.sun {
+  position: absolute;
+
+  /* Push part of the sun outside the corner */
+  top: -30px;
+  right: -30px;
+
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: #ffd84d;
+
+  box-shadow:
+    0 0 15px rgba(255, 216, 77, 1),
+    0 0 35px rgba(255, 216, 77, 0.8),
+    0 0 60px rgba(255, 216, 77, 0.5);
+
+  z-index: 0;
+
+  animation: sun-glow 2s ease-in-out infinite alternate;
+}
+
+.sun::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(255, 220, 80, 0.8) 0deg 5deg,
+    transparent 5deg 18deg
+  );
+
+  border-radius: 50%;
+
+  z-index: -1;
+
+  animation: sun-rays 8s linear infinite;
+}
+
+@keyframes sun-rays {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes sun-glow {
+  from {
+    box-shadow:
+      0 0 15px rgba(255, 216, 77, 0.8),
+      0 0 30px rgba(255, 216, 77, 0.5),
+      0 0 45px rgba(255, 216, 77, 0.3);
+  }
+
+  to {
+    box-shadow:
+      0 0 25px rgba(255, 216, 77, 1),
+      0 0 50px rgba(255, 216, 77, 0.8),
+      0 0 80px rgba(255, 216, 77, 0.5);
+  }
+}
+
+/*sun bottom*/
+
+
+
+
+/* top clouds */
+.cloud {
+  position: absolute;
+
+  width: 100px;
+  height: 30px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 50px;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* Left cloud bump */
+.cloud::before {
+  content: "";
+
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+
+  background: inherit;
+
+  border-radius: 50%;
+
+  left: 15px;
+  top: -20px;
+}
+
+
+/* Right cloud bump */
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  width: 55px;
+  height: 55px;
+
+  background: inherit;
+
+  border-radius: 50%;
+
+  right: 12px;
+  top: -28px;
+}
+
+.cloud-one {
+  top: 30px;
+  left: -150px;
+
+  animation: cloud-drift 60s linear infinite;
+  animation-delay: 0s;
+}
+
+.cloud-two {
+  top: 70px;
+  left: -150px;
+
+  transform: scale(0.7);
+  opacity: 0.65;
+
+  animation: cloud-drift 60s linear infinite;
+  animation-delay: -20s;
+}
+
+.cloud-three {
+  top: 15px;
+  left: -150px;
+
+  transform: scale(0.85);
+  opacity: 0.8;
+
+  animation: cloud-drift 60s linear infinite;
+  animation-delay: -40s;
+}
+
+@keyframes cloud-drift {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: calc(100vw + 150px) 0;
+  }
+}
+
+
+@keyframes cloud-drift-small {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: calc(100vw + 300px) 0;
+  }
+}
+/*clouds bottom*/
 
 @media (prefers-reduced-motion: reduce) {
   .navbar-logo:hover .bird-logo,

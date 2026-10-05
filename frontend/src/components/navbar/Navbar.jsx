@@ -5,6 +5,13 @@ import ChickLogo from "../logo/Chickenlogo.jsx";
 function Navbar() {
   return (
     <nav className="navbar" aria-label="Main navigation">
+    
+    <div className="sun" aria-hidden="true"></div>
+
+    <div className="cloud cloud-one" aria-hidden="true"></div>
+    <div className="cloud cloud-two" aria-hidden="true"></div>
+    <div className="cloud cloud-three" aria-hidden="true"></div>
+
       <ChickLogo />
 
       <div className="navbar-links">
