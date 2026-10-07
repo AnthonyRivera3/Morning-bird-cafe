@@ -1,0 +1,56 @@
+@media (max-width: 768px) {
+
+  .order-section {
+    padding:
+      60px
+      16px;
+  }
+
+
+  .order-container h1 {
+    font-size: 28px;
+  }
+
+
+  .order-intro {
+    font-size: 16px;
+  }
+
+
+  /* Pickup / Delivery */
+
+  .order-type-selector {
+    gap: 12px;
+  }
+
+
+  .order-type-button {
+    flex: 1;
+
+    padding:
+      12px
+      20px;
+
+    font-size: 16px;
+  }
+
+
+  /* Locations */
+
+  .location-list {
+    grid-template-columns: 1fr;
+  }
+
+
+  .location-card {
+    width: 100%;
+  }
+
+
+  /* Delivery form */
+
+  .delivery-form {
+    width: 100%;
+  }
+
+}

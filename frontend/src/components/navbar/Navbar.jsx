@@ -16,8 +16,8 @@ function Navbar() {
 
       <div className="navbar-links">
         <a href="#menu">Menu</a>
-        <a href="#menu">Order</a>
-        <a href="merch">Merch</a>
+        <a href="#order">Order</a>
+        <a href="#merch">Merch</a>
         <a href="#locations">Locations & Hours</a>
       </div>
     </nav>
