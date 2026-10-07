@@ -1,21 +1,17 @@
 const locations = [
   {
     id: 1,
-    name: "Morning Bird Cafe - Boston",
-    address: "123 Main Street, Boston, MA",
+    name: "Morning Bird Cafe - New York Staten Island",
+    address: "1281 Veterans Road West",
   },
 
   {
     id: 2,
-    name: "Morning Bird Cafe - Cambridge",
-    address: "456 Cambridge Street, Cambridge, MA",
+    name: "Morning Bird Cafe - Newark",
+    address: "124 Newark Airport - NJ",
   },
 
-  {
-    id: 3,
-    name: "Morning Bird Cafe - Medford",
-    address: "789 High Street, Medford, MA",
-  },
+
 ];
 
 export default locations;
