@@ -238,6 +238,9 @@
   font-size: 18px;
 
   cursor: pointer;
+
+  display: inline-block;
+  text-decoration: none;  
 }
 
 

@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar.jsx';
 import Footer from "./components/footer/Footer.jsx";
 import Order from "./components/order/Order.jsx";
 import Hero from "./components/hero/Hero.jsx";
+import Menu from "./components/menu/Menu.jsx";
 
 function App() {
   
@@ -14,6 +15,8 @@ function App() {
         <Hero />
 
         <Order />
+
+        <Menu />
       </main>
 
       <Footer />
