@@ -1,0 +1,71 @@
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+
+/* =========================
+   HERO IMAGE
+   ========================= */
+
+.hero-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   ORDER BUTTON
+   ========================= */
+
+.hero-order-button {
+  position: absolute;
+
+  /*
+    These values position the real
+    button over the button already
+    shown in the generated picture.
+  */
+  left: 17%;
+  top: 52%;
+
+  padding: 15px 30px;
+
+  border-radius: 30px;
+
+  background-color: #ffc94f;
+
+  color: #3d2917;
+
+  font-family: "Fredoka", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.hero-order-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 7px 14px rgba(0, 0, 0, 0.2);
+}
