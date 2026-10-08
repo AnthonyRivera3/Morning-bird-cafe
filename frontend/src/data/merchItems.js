@@ -1,11 +1,11 @@
 const merchItems = [
   {
     id: "merch-shirt-1",
-    name: "Morning Bird T-Shirt",
-    category: "Shirts",
-    description: "Soft cotton tee featuring the Morning Bird Cafe logo.",
-    price: 24.99,
-    image: "/merch-items-pics/morning-bird-shirt.jpeg",
+    name: "Morning Bird Hoodie",
+    category: "Hoodie",
+    description: "Soft cotton hoodie featuring the Morning Bird Cafe logo.",
+    price: 124.99,
+    image: "/merch-images/morning-bird-hoodie.png",
   },
 
   {
@@ -14,7 +14,7 @@ const merchItems = [
     category: "Drinkware",
     description: "Ceramic coffee mug for your favorite morning drink.",
     price: 14.99,
-    image: "/merch-items-pics/morning-bird-mug.jpeg",
+    image: "/merch-images/mug-bird.png",
   },
 
   {
@@ -22,8 +22,17 @@ const merchItems = [
     name: "Morning Bird Hat",
     category: "Hats",
     description: "Adjustable embroidered Morning Bird Cafe cap.",
-    price: 19.99,
-    image: "/merch-items-pics/morning-bird-hat.jpeg",
+    price: 59.99,
+    image: "/merch-images/hat-bird.png",
+  },
+
+  {
+    id: "merch-socks-1",
+    name: "Morning Bird Socks",
+    category: "Socks",
+    description: "Cozy Fuzzy Morning Bird Socks.",
+    price: 49.99,
+    image: "/merch-images/socks-bird.png",
   },
 ];
 
