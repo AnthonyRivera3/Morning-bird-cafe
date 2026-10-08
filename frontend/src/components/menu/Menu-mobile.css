@@ -149,3 +149,15 @@
   }
 
 }
+
+@media (max-width: 768px) {
+  .menu-item-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item-image {
+    height: 190px;
+  }
+}

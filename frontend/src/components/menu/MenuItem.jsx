@@ -1,6 +1,13 @@
 function MenuItem({ item, addToCart }) {
   return (
     <article className="menu-item">
+
+      <img
+        src={item.image}
+        alt={item.name}
+        className="menu-item-image"
+      />
+
       <div className="menu-item-info">
         <h3>{item.name}</h3>
 
@@ -20,6 +27,7 @@ function MenuItem({ item, addToCart }) {
       >
         Add to Cart
       </button>
+
     </article>
   );
 }
