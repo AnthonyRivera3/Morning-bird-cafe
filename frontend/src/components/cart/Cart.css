@@ -1,0 +1,205 @@
+.cart-section {
+  width: 100%;
+
+  padding: 70px 24px 90px;
+
+  background-color: #fff8e7;
+
+  font-family: "Fredoka", sans-serif;
+
+  scroll-margin-top: 170px;
+}
+
+
+.cart-container {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+
+.cart-container h1 {
+  text-align: center;
+
+  color: #54351f;
+
+  font-size: 40px;
+}
+
+
+.empty-cart {
+  text-align: center;
+
+  color: #76543b;
+
+  font-size: 18px;
+
+  margin-top: 40px;
+}
+
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin-top: 35px;
+}
+
+
+.cart-item {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px;
+
+  border: 2px solid #f1dfc2;
+  border-radius: 16px;
+
+  background-color: white;
+
+  box-shadow:
+    0 5px 14px rgba(84, 53, 31, 0.08);
+}
+
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+
+.cart-item-info {
+  flex: 1;
+}
+
+
+.cart-item-info h3 {
+  margin: 0 0 8px;
+
+  color: #54351f;
+}
+
+
+.cart-item-info p {
+  margin: 0;
+
+  color: #f4a719;
+
+  font-weight: 600;
+}
+
+
+.remove-cart-button {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #e76656;
+
+  color: white;
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+
+.cart-summary {
+  margin-top: 35px;
+
+  text-align: right;
+}
+
+
+.cart-summary h2 {
+  color: #54351f;
+}
+
+
+.checkout-button {
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 12px;
+
+  background-color: #f4a719;
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   QUANTITY CONTROLS
+   ========================= */
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.quantity-button {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #f4a719;
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.quantity-button:hover {
+  transform: scale(1.08);
+
+  background-color: #dd9411;
+}
+
+
+.quantity-number {
+  min-width: 25px;
+
+  text-align: center;
+
+  color: #54351f;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.cart-item-subtotal {
+  margin-top: 6px !important;
+
+  color: #76543b !important;
+
+  font-size: 14px;
+}

@@ -1,0 +1,46 @@
+.floating-cart-button {
+  position: fixed;
+
+  right: 30px;
+  bottom: 30px;
+
+  z-index: 2000;
+
+  padding: 14px 22px;
+
+  border-radius: 30px;
+
+  background-color: #f4a719;
+  color: white;
+
+  font-family: "Fredoka", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.floating-cart-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .floating-cart-button {
+    right: 16px;
+    bottom: 16px;
+
+    padding: 12px 18px;
+
+    font-size: 14px;
+  }
+}

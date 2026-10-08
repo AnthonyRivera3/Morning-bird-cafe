@@ -27,7 +27,7 @@ function DeliveryForm({
           name="street"
           value={deliveryAddress.street}
           onChange={handleChange}
-          placeholder="123 Main Street"
+          placeholder="2800 Victory blvd"
         />
       </label>
 
@@ -40,7 +40,7 @@ function DeliveryForm({
           name="city"
           value={deliveryAddress.city}
           onChange={handleChange}
-          placeholder="Boston"
+          placeholder="Staten Island"
         />
       </label>
 
@@ -53,7 +53,7 @@ function DeliveryForm({
           name="zip"
           value={deliveryAddress.zip}
           onChange={handleChange}
-          placeholder="02101"
+          placeholder="10314"
         />
       </label>
 
