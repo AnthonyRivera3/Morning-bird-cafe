@@ -9,6 +9,7 @@ import Hero from "./components/hero/Hero.jsx";
 import Menu from "./components/menu/Menu.jsx";
 import Cart from "./components/cart/Cart.jsx";
 import Merch from "./components/merch/Merch.jsx";
+import Info from "./components/info/Info.jsx";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -129,7 +130,7 @@ function App() {
           decreaseQuantity={decreaseQuantity}
         />
       </main>
-
+      <Info />
       <Footer />
     </>
   );

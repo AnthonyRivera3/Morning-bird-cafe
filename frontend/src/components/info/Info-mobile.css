@@ -1,0 +1,96 @@
+/* =========================
+   MOBILE INFO SECTION
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .info-section {
+    padding:
+      50px
+      16px
+      70px;
+
+    scroll-margin-top: 180px;
+  }
+
+
+  /* Heading */
+
+  .info-heading {
+    margin-bottom: 30px;
+  }
+
+
+  .info-heading h1 {
+    font-size: 32px;
+  }
+
+
+  .info-eyebrow {
+    font-size: 13px;
+  }
+
+
+  .info-description {
+    font-size: 16px;
+  }
+
+
+  /* One location per row */
+
+  .info-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .info-card {
+    padding: 22px;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 480px) {
+
+  .info-section {
+    padding:
+      40px
+      12px
+      60px;
+  }
+
+
+  .info-heading h1 {
+    font-size: 28px;
+  }
+
+
+  .info-card {
+    padding: 18px;
+  }
+
+
+  .info-card h2 {
+    font-size: 20px;
+  }
+
+
+  /* Put hours underneath day name */
+  .info-hours p {
+    flex-direction: column;
+
+    gap: 3px;
+  }
+
+
+  .info-hours span {
+    white-space: normal;
+  }
+
+}
